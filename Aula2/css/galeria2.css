@@ -1,0 +1,77 @@
+/*Codigo de animação*/
+/*A palavra keyframe indica que é uma animação*/
+
+@keyframes iresquerda{
+    /*Estado inicial*/
+
+    from{
+        margin-left:600px;
+    }
+
+    /*Estadop final*/
+    to{
+        margin-left: 5px;
+    }
+}
+
+h1{
+/*define o nome da animação que será usada*/
+    animation-name:iresquerda;
+/*Define a duração desta animação*/ 
+    animation-duration: 3s;
+}
+/*Codigo de animação*/
+/*A palavra keyframe indica que é uma animação*/
+@keyframes acelera {
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 800px;
+    }
+}
+.carro{
+    width: 90px;
+    animation-name: acelera;
+    animation-duration: 8s;
+
+}
+
+#car1{
+    /*Mantém a mesma velocidade*/
+    animation-timing-function: linear;
+    /*começar ao contrário*/
+    animation-direction: reverse;
+
+}
+
+#car2 {
+    /*começa lento, fica rápido e termina lento*/
+    animation-timing-function: ease;
+    /*ocorrencia da animação*/ 
+    animation-iteration-count: 2;
+    /*Executa a animação do começo ao fim e depois executa ao contrário*/
+    animation-direction: alternate;
+
+}
+#car3{
+    animation-timing-function: ease-in;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
+}
+
+#car4{
+    /*Começa rápido, depois fica lento*/
+    animation-timing-function: ease-out;
+}
+
+#car5{
+    /*Começa e termina lento*/
+    animation-timing-function: ease-in-out;
+}
+
+#car6{
+    /*Começa a animação 1 segundo depois dos outros carros*/
+    animation-delay: 1s;
+}
